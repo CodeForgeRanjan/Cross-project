@@ -31,7 +31,7 @@ boxes.forEach((box) =>{
       box.innerText ="X";
       turnO = true;
     }
-    box.disabled =true; //Use this code for lock the value O and X
+    box.disabled =true; 
 
     checkWinner();
 
@@ -41,17 +41,6 @@ boxes.forEach((box) =>{
 
 const checkWinner = () => {
   for (let pattern of winPatterns) {
-      //   console.log(
-      //     [pattern[0]], 
-      //     [pattern[1]], 
-      //     [pattern[2]]
-      //   );
-    
-      //   console.log(
-      //     boxes[pattern[0]].innerText, 
-      //     boxes[pattern[1]].innerText, 
-      //     boxes[pattern[2]].innerText
-      //   );//This mark is our position
 
     let pos1Val = boxes[pattern[0]].innerText;
     let pos2Val = boxes[pattern[1]].innerText;
@@ -68,7 +57,7 @@ const disableBoxes = () => {
   for (let box of boxes) {
     box.disabled = true;
   }
-}; // ye code box pe click na krne ke liye hai jb koi team jeet chuki hai, thsi disabled code write over 34 para
+}; 
 
 
 
@@ -82,7 +71,7 @@ const enableBoxes = () => {
 const showWinner = (winner) => {
   msg.innerText = `congratulations, Winner is ${winner}`;
   msgContainer.classList.remove("hide");
-  disableBoxes(); //not cliked on box X and O when team is winning
+  disableBoxes(); 
 };
 
 
